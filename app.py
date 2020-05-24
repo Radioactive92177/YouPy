@@ -14,8 +14,8 @@ The link to the repo is provided downbelow :-
 https://github.com/Radioactive92177/YouPy.git
 ''')
 
-url = input("Please provide the url of the video : )
-"""url = "https://www.youtube.com/watch?v=-XaVelaRiiw""""
+url = input("Please provide the url of the video : ")
+#url = "https://www.youtube.com/watch?v=-XaVelaRiiw"
 
 yt = YouTube(url)
 
