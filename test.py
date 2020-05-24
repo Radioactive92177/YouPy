@@ -1,7 +1,16 @@
-from pytube import YouTube
+validInputs = ['Y','N','y','n']
 
-url = "https://www.youtube.com/watch?v=9bZkp7q19f0"
+while True:
+    url = input('Please provide url of the video: ')
+    choice = input('Is this the video? y/n : ')
 
-yt = YouTube(url)
-
-print(yt.length)
+    if choice in validInputs:
+        if choice.lower() == 'y':
+            print('You said yes')
+            print("Downloading video")
+            break
+        else:
+            print("Please make sure to the validity of the url")
+            continue
+    else:
+        print('Invalid input')

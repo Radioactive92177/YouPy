@@ -14,15 +14,33 @@ The link to the repo is provided downbelow :-
 https://github.com/Radioactive92177/YouPy.git
 ''')
 
-url = input("Please provide the url of the video : ")
-#url = "https://www.youtube.com/watch?v=-XaVelaRiiw"
-
-yt = YouTube(url)
-
-print(f"Video title : {yt.title}")
-print("")
+#url = input("Please provide the url of the video : ")
 
 
-video = yt.streams.first()
+validInputs = ['Y','N','y','n']
+while True:
+    url = input("Please provide the url of the video : ")
 
-video.download('/Downloads')
+    yt = YouTube(url)
+
+    print(f"Video title : {yt.title}")
+    print("")
+
+    choice = input('Is this the video? y/n : ')
+
+    if choice in validInputs:
+        if choice.lower() == 'y':
+            print('Please wait,initializig download...')
+            video = yt.streams.first()
+            
+            print("Downloading video...")
+            video.download('/Downloads')
+
+            print('Video downloaded in Downloads')
+            print('Thank you for using the software')
+            break
+        else:
+            print("Please make sure to the validity of the url")
+            continue
+    else:
+        print('Invalid input')
