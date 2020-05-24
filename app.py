@@ -34,7 +34,7 @@ while True:
             video = yt.streams.first()
             
             print("Downloading video...")
-            video.download('/Downloads')
+            video.download('Downloads')
 
             print('Video downloaded in Downloads')
             print('Thank you for using the software')
