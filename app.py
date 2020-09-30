@@ -14,8 +14,6 @@ The link to the repo is provided downbelow :-
 https://github.com/Radioactive92177/YouPy.git
 ''')
 
-#url = input("Please provide the url of the video : ")
-
 
 validInputs = ['Y','N','y','n']
 while True:
@@ -33,14 +31,14 @@ while True:
             print('Please wait,initializig download...')
             video = yt.streams.first()
             
-            print("Downloading video...")
+            print(f"Downloading video... {yt.title}")
             video.download('Downloads')
 
             print('Video downloaded in Downloads')
             print('Thank you for using the software')
             break
         else:
-            print("Please make sure to the validity of the url")
+            print("Please make sure to check validity of the url")
             continue
     else:
         print('Invalid input')
